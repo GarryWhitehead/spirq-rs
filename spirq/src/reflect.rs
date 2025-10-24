@@ -78,6 +78,7 @@ fn is_ty_op(op: Op) -> bool {
         Op::TypeRayQueryKHR => true,
         Op::TypeAccelerationStructureKHR => true,
         Op::TypeCooperativeMatrixNV => true,
+        Op::TypeCooperativeMatrixKHR => true,
         Op::TypeVmeImageINTEL => true,
         Op::TypeAvcImePayloadINTEL => true,
         Op::TypeAvcRefPayloadINTEL => true,
