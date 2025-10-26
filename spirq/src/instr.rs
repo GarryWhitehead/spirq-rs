@@ -253,4 +253,7 @@ define_ops! {
     OpTypeRayQueryKHR {
         ty_id: TypeId = read_u32(),
     }
+    OpTypeCooperativeMatrixKHR {
+        ty_id: TypeId = read_u32(),
+    }
 }

@@ -498,6 +498,11 @@ impl<'a> ReflectIntermediate<'a> {
                 let op = OpTypeRayQueryKHR::try_from(instr)?;
                 self.ty_reg.set(op.ty_id, Type::RayQuery(RayQueryType {}))?;
             }
+            Op::TypeCooperativeMatrixKHR => {
+                let op = OpTypeCooperativeMatrixKHR::try_from(instr)?;
+                self.ty_reg
+                    .set(op.ty_id, Type::DeviceAddress(DeviceAddressType {}))?;
+            }
             _ => return Err(anyhow!("unexpected opcode {:?}", instr.op())),
         }
         Ok(())
